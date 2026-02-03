@@ -1,0 +1,63 @@
+# BTOP Soft Nighttime Serenity Theme
+# Based on: FarOut
+# Modified for palette: soft-nighttime-serenity
+
+theme[main_bg]="#121212"
+theme[main_fg]="#cccccc"
+
+theme[title]="#f2f2f2"
+theme[hi_fg]="#e6e6e6"
+
+theme[selected_bg]="#4d4d4d"
+theme[selected_fg]="#f0f0f0"
+
+theme[inactive_fg]="#333333"
+theme[graph_text]="#b3b3b3"
+
+theme[proc_misc]="#7f7f7f"
+
+theme[cpu_box]="#666666"
+theme[mem_box]="#666666"
+theme[net_box]="#666666"
+theme[proc_box]="#666666"
+theme[div_line]="#1a1a1a"
+
+# Temperature graph colors
+theme[temp_start]="#666666"
+theme[temp_mid]="#999999"
+theme[temp_end]="#f2f2f2"
+
+# CPU graph colors
+theme[cpu_start]="#4d4d4d"
+theme[cpu_mid]="#999999"
+theme[cpu_end]="#f5f5f5"
+
+# Mem/Disk free meter
+theme[free_start]="#7f7f7f"
+theme[free_mid]="#b3b3b3"
+theme[free_end]="#f0f0f0"
+
+# Mem/Disk cached meter
+theme[cached_start]="#666666"
+theme[cached_mid]="#999999"
+theme[cached_end]="#cccccc"
+
+# Mem/Disk available meter
+theme[available_start]="#999999"
+theme[available_mid]="#d9d9d9"
+theme[available_end]="#f2f2f2"
+
+# Mem/Disk used meter
+theme[used_start]="#4d4d4d"
+theme[used_mid]="#999999"
+theme[used_end]="#e6e6e6"
+
+# Download graph colors
+theme[download_start]="#7f7f7f"
+theme[download_mid]="#cccccc"
+theme[download_end]="#f2f2f2"
+
+# Upload graph colors
+theme[upload_start]="#4d4d4d"
+theme[upload_mid]="#999999"
+theme[upload_end]="#e6e6e6"

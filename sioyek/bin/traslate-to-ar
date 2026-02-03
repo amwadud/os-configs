@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# File: ~/.config/sioyek/bin/traslate-to-ar
+
+text="$1"
+translation=$(trans :ar "$text" | awk 'NR==4')
+echo "$translation"
+notify-send "$translation" -t 5000

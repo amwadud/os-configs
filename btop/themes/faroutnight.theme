@@ -1,0 +1,63 @@
+# BTOP FarOut theme
+# Author: AIT EL HAJ Abdelouadoud
+# License: MIT
+
+theme[main_bg]="#0f0908"
+theme[main_fg]="#E0CCAE"
+
+theme[title]="#d47d49"
+theme[hi_fg]="#f2a766"
+
+theme[selected_bg]="#6b442f"
+theme[selected_fg]="#E0CCAE"
+
+theme[inactive_fg]="#392D2B"
+theme[graph_text]="#c4a98f"
+
+theme[proc_misc]="#a67458"
+
+theme[cpu_box]="#d47d49"
+theme[mem_box]="#d47d49"
+theme[net_box]="#d47d49"
+theme[proc_box]="#d47d49"
+theme[div_line]="#241816"
+
+# Temperature graph colors
+theme[temp_start]="#a67458"
+theme[temp_mid]="#f2a766"
+theme[temp_end]="#bf472c"
+
+# CPU graph colors
+theme[cpu_start]="#a4896f"
+theme[cpu_mid]="#f2a766"
+theme[cpu_end]="#bf472c"
+
+# Mem/Disk free meter
+theme[free_start]="#a4896f"
+theme[free_mid]=""
+theme[free_end]=""
+
+# Mem/Disk cached meter
+theme[cached_start]="#a67458"
+theme[cached_mid]=""
+theme[cached_end]=""
+
+# Mem/Disk available meter
+theme[available_start]="#f2a766"
+theme[available_mid]=""
+theme[available_end]=""
+
+# Mem/Disk used meter
+theme[used_start]="#bf472c"
+theme[used_mid]=""
+theme[used_end]=""
+
+# Download graph colors
+theme[download_start]="#f2a766"
+theme[download_mid]=""
+theme[download_end]=""
+
+# Upload graph colors
+theme[upload_start]="#8a4b53"
+theme[upload_mid]=""
+theme[upload_end]=""

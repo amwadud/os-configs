@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+# Get the PDF path from sioyek
+pdf_path="$1"
+
+# Strip the filename (without .pdf)
+filename="$(basename "$pdf_path" .pdf)"
+
+# Construct the Markdown path
+md_path="/home/eren/org/notes/books/$filename.md"
+
+# Optionally create the file if it doesn't exist
+if [ ! -f "$md_path" ]; then
+	touch "$md_path"
+fi
+
+# Launch Neovim in foot
+foot nvim "$md_path"

@@ -1,0 +1,32 @@
+# Custom Terminal Color Scheme (Based on the Kitty theme provided)
+
+[cursor]
+# Cursor color
+color=D6B593 D6B593
+
+[colors]
+# Background color of the terminal
+background=32302f
+# Foreground (text) color
+foreground=A89984
+
+# Regular colors
+regular0=32302f  # Blackish background (same as background color)
+regular1=ea6962  # Red
+regular2=a9b665  # Green
+regular3=d8a657  # Yellow
+regular4=7DAEA3  # Blue
+regular5=d3869b  # Magenta
+regular6=89b482  # Cyan
+regular7=D4BE98  # White (light yellowish)
+
+# Bright colors
+bright0=665c54  # Slightly lighter black (color8)
+bright1=ea6962  # Red (same as regular1)
+bright2=a9b665  # Green (same as regular2)
+bright3=e78a4e  # Bright Yellow
+bright4=7DAEA3  # Blue (same as regular4)
+bright5=d3869b  # Magenta (same as regular5)
+bright6=89b482  # Cyan (same as regular6)
+bright7=D4BE98  # White (same as regular7)
+
