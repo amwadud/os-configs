@@ -1,0 +1,14 @@
+/*
+ * Workspaces
+ */
+
+/*
+ * Minimal example of defining multiple workspaces
+ */
+workspace "chat"
+workspace "web"
+workspace "code"
+workspace "media"
+workspace "games"
+workspace "docs"
+workspace "misc"
