@@ -1,0 +1,241 @@
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://yalter.github.io/niri/Configuration:-Window-Rules
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+window-rule {
+    match app-id=r#"pavucontrol$"#
+    open-floating true
+    open-focused true
+    min-width 800
+    min-height 400
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"Firefox$"# title="^Library$"
+    open-floating true
+    max-width 800
+    max-height 300
+}
+
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"sioyek$"# title="^Select Document$"
+    open-floating true
+    max-width 800
+    max-height 300
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+window-rule {
+    match app-id="sioyek$"
+    open-fullscreen   true
+}
+
+window-rule {
+    match title="Choose Files"
+    min-width 100
+    max-width 200
+    min-height 300
+    max-height 300
+    open-focused true
+}
+
+window-rule {
+    match app-id="blueman-manager"
+    min-width 100
+    max-width 200
+    min-height 300
+    max-height 300
+    open-focused true
+}
+
+// Make scrolling in Firefox a bit slower.
+window-rule {
+    match app-id="Firefox"
+    scroll-factor 1.75
+    // open-on-workspace "browser"
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    default-column-width { proportion 0.33; }
+    // open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id="foot"
+    open-maximized    true
+    // open-on-workspace "term"
+}
+
+// Open the Firefox picture-in-picture window at the bottom-left corner of the screen
+// with a small gap.
+window-rule {
+    match app-id="firefox$" title="^Picture-in-Picture$"
+    default-floating-position x=32 y=32 relative-to="bottom-left"
+}
+
+window-rule {
+    match app-id="firefox$" title="^File Upload - Channel content - YouTube Studio — Mozilla Firefox$"
+    open-floating true
+    min-height 400
+    max-height 400
+}
+
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+window-rule {
+    geometry-corner-radius 3
+    clip-to-geometry true
+    open-maximized true // Open all windows maximized.
+    opacity 0.995
+
+    focus-ring {
+        on
+        width 2.5
+        active-gradient   from="#d8a657" to="#d8a657" angle=45
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        urgent-gradient   from="#ea6962" to="#ea6962" angle=45
+    }
+}
+
+window-rule {
+    match app-id="^org.gnome.Nautilus$"
+    open-floating true
+
+    // size on opening
+    // default-column-width { fixed 700; }
+    // default-window-height { fixed 500; }
+
+    // keep focus when opening
+    open-focused true
+}
+
+window-rule {
+    match app-id="^gvim$"
+    open-floating true
+
+    // size on opening
+    default-column-width { fixed 700; }
+    default-window-height { fixed 500; }
+
+    // keep focus when opening
+    open-focused true
+}
+
+window-rule {
+    match app-id="foot$" title="^Updating OS$"
+    open-floating true
+
+    // size on opening
+    default-column-width { fixed 700; }
+    default-window-height { fixed 350; }
+
+    // keep focus when opening
+    open-focused true
+}
+
+window-rule {
+    match app-id="com.rtosta.zapzap$" title="^Save file$"
+    open-floating true
+
+    // size on opening
+    default-column-width { fixed 700; }
+    default-window-height { fixed 350; }
+
+    // keep focus when opening
+    open-focused true
+}
+
+window-rule {
+    match app-id="udiskie$" title="^udiskie$"
+    open-floating true
+
+    // size on opening
+    default-column-width { fixed 700; }
+    default-window-height { fixed 350; }
+
+    // keep focus when opening
+    open-focused true
+}
+
+// Indicate screencasted windows with red colors.
+window-rule {
+    match is-window-cast-target=true
+
+    focus-ring {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+
+    border {
+        inactive-color "#7d0d2d"
+    }
+
+    shadow {
+        color "#7d0d2d70"
+    }
+
+    tab-indicator {
+        active-color "#f38ba8"
+        inactive-color "#7d0d2d"
+    }
+}
+
+window-rule {
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+
+window-rule {
+    match app-id="Waydroid$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="Waydroid$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="org.gnome.clocks$"
+    open-floating true
+    default-column-width { fixed 780; }
+    default-window-height { fixed 460; }
+}

@@ -1,0 +1,6 @@
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+    xcursor-theme          "WhiteSur-cursors"
+    xcursor-size           24
+}

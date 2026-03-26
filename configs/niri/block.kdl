@@ -1,0 +1,17 @@
+
+// Block out password managers from screenshots.
+window-rule {
+    match app-id= r#"^org\.keepassxc\.KeePassXC$"#
+    block-out-from "screencast"
+}
+
+// Block out notifications from screenshots.
+layer-rule {
+    match namespace= "^notifications$"
+    block-out-from "screencast"
+}
+
+window-rule {
+  match app-id= r#"^org.telegram.messenger$"#
+  block-out-from "screencast"
+}

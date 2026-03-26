@@ -3,6 +3,7 @@
 #!/bin/bash
 
 echo "Updating system and installing packages..."
+
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
     zsh \
